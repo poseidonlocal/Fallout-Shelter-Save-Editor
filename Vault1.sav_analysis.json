@@ -1,0 +1,19 @@
+{
+  "file_path": "Vault1.sav",
+  "analysis": {
+    "raw_size": 95532,
+    "raw_preview": "7a434c314678456877355343656e6f776c487276705a48453338676d614d6e5a6c496c6d4d43347a5930504c2f4a505342666443625279533039335073614d5631674377734236624c562b586455792b57517241713759534e4f4b447961477730647467",
+    "base64_decoded": true,
+    "decoded_size": 71648,
+    "decoded_preview": "cc22f5171121c394827a7a30947aefa591c4dfc82668c9d9948966302e336343cbfc93d205f7426d1c92d3ddcfb1a315d600",
+    "zlib_error": "Error -3 while decompressing data: incorrect header check",
+    "gzip_error": "Not a gzipped file (b'\\xcc\"')",
+    "zlib_raw_error": "Error -3 while decompressing data: invalid code lengths set",
+    "first_4_bytes_le": 401941196,
+    "first_4_bytes_be": 3424843031,
+    "possible_json_content": "\"\u0017\u0011!\u00d4zz0z\uf951&h\u0654f0.3cC\u0005Bm\u001c\u03f1\u0015\u0000\u001e-_uLY\n\u00124\u0261`\u001ae\u0007\u001f\u0013j\u000fk\u000b:\u001bT_m;3e\u071e\u0011\u001fNCt\u001cI\u0492&`OD<M\"v\rw\u0148\u0001\u0018g<\u0013pg\u0279 .9\u0017/V`<\u0011&fCQ7\n4ZshwStn?\u0019\u007fXr1U\u001b\r^+B:\u0010+}e|bZ\u007f\u07e2VZ\b\u001d\u0015]\u0440J9\u0016?\u0089\u0004\u007fq0(B\u0016v-\u01a1^)TLk\u001d\u0004H-\u0017;\u001ec*C\u001f\u0748}U\u000e\u0005r\rA[{xzr\nZ\u0015\n-<\u01c1\u0015QD)\u0010a,)Xk$\rpNK\u001d\u001c\u0005s\u0011Y\u0011\u0010r.\u0011#1&\u0015f\"y\u0007Z\u01b03.V\u0016PTYk\u0015$\u05cd>6:k\u01b33&'6\u000e\u033cV{\u001e\\d\u000f->\u007f\u001bG<O>Q=Y\u00b9pQ<<|x'2\u001dL6\u00139\u06e8\\im_\rr *}\u000fW\t[~\u0016$\u001aTo/~;S~&[)\ud1e5;\u0016N074lqk)B&\u000fBQBcZ;[\u0016R>\u0007gly\u0014\u001a\u0001\u007f*\u001f\u033c@F\u025a}:[pt:\u0006\u0701W:w]*\u0010Xa4{5` k\u001c.\u02a2\u0521(D\u001c$<\u0017\u04a8gj\u0017i-||\u0015\u001a-\u0527\u03577@~I\u0003l\u0007)\u0006n{=\t}\u03c8\u007f\u0017(\n>\u0006,2.\u001e)K\u0269\u00af\u0006~\u0007\u0018y\u0014l\u02ae.G+[T<\u001e\u007fYP;!\u0015\u04a9\u0004{B\u02be*U\u0487`\u05ab\"}wy6~\"z.\n1QRXex9}NWv,\"KON\u000e*tbk+jY'\u007f\u0018Q\u0004ko5\u0006\u0001V\u001cXFg0\u036aJA\u0011\u1cef",
+    "entropy": 7.997523790919208,
+    "likely_encrypted": true
+  },
+  "errors": []
+}

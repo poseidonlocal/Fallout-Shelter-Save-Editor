@@ -1,0 +1,7 @@
+{
+  "file_path": ".",
+  "analysis": {},
+  "errors": [
+    "File read failed: [Errno 13] Permission denied: '.'"
+  ]
+}

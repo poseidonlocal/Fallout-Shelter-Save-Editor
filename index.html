@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fallout Shelter Save Editor</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Header -->
+        <header class="app-header">
+            <div class="header-content">
+                <div class="logo">
+                    <i class="fas fa-radiation"></i>
+                    <h1>Fallout Shelter Save Editor</h1>
+                </div>
+                <div class="file-info">
+                    <span id="current-file">No file loaded</span>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Sidebar -->
+            <aside class="sidebar">
+                <nav class="nav-tabs">
+                    <button class="nav-tab active" data-tab="overview">
+                        <i class="fas fa-home"></i>
+                        Overview
+                    </button>
+                    <button class="nav-tab" data-tab="resources">
+                        <i class="fas fa-coins"></i>
+                        Resources
+                    </button>
+                    <button class="nav-tab" data-tab="vault">
+                        <i class="fas fa-building"></i>
+                        Vault Info
+                    </button>
+                    <button class="nav-tab" data-tab="dwellers">
+                        <i class="fas fa-users"></i>
+                        Dwellers
+                    </button>
+                    <button class="nav-tab" data-tab="raw">
+                        <i class="fas fa-code"></i>
+                        Raw Data
+                    </button>
+                </nav>
+
+                <div class="quick-actions">
+                    <h3>Quick Actions</h3>
+                    <button class="action-btn" id="open-file-btn">
+                        <i class="fas fa-folder-open"></i>
+                        Open Save
+                    </button>
+                    <button class="action-btn" id="save-btn" disabled>
+                        <i class="fas fa-save"></i>
+                        Save
+                    </button>
+                    <button class="action-btn" id="backup-btn" disabled>
+                        <i class="fas fa-shield-alt"></i>
+                        Backup
+                    </button>
+                </div>
+            </aside>
+
+            <!-- Content Area -->
+            <section class="content-area">
+                <!-- Overview Tab -->
+                <div class="tab-content active" id="overview-tab">
+                    <div class="welcome-screen">
+                        <div class="welcome-icon">
+                            <i class="fas fa-radiation"></i>
+                        </div>
+                        <h2>Welcome to Fallout Shelter Save Editor</h2>
+                        <p>Load a save file to begin editing your vault's resources, dwellers, and more.</p>
+                        
+                        <div class="feature-grid">
+                            <div class="feature-card">
+                                <i class="fas fa-coins"></i>
+                                <h3>Resource Management</h3>
+                                <p>Edit caps, food, water, power, and consumables</p>
+                            </div>
+                            <div class="feature-card">
+                                <i class="fas fa-users"></i>
+                                <h3>Dweller Editor</h3>
+                                <p>Modify dweller stats and equipment</p>
+                            </div>
+                            <div class="feature-card">
+                                <i class="fas fa-building"></i>
+                                <h3>Vault Information</h3>
+                                <p>View and edit vault details</p>
+                            </div>
+                            <div class="feature-card">
+                                <i class="fas fa-shield-alt"></i>
+                                <h3>Safe Editing</h3>
+                                <p>Automatic backups and validation</p>
+                            </div>
+                        </div>
+
+                        <button class="primary-btn" id="get-started-btn">
+                            <i class="fas fa-folder-open"></i>
+                            Get Started - Open Save File
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Resources Tab -->
+                <div class="tab-content" id="resources-tab">
+                    <div class="tab-header">
+                        <h2><i class="fas fa-coins"></i> Resource Management</h2>
+                        <div class="tab-actions">
+                            <button class="secondary-btn" id="max-resources-btn">
+                                <i class="fas fa-arrow-up"></i>
+                                Max All
+                            </button>
+                            <button class="secondary-btn" id="reset-resources-btn">
+                                <i class="fas fa-undo"></i>
+                                Reset
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="resource-grid">
+                        <div class="resource-card">
+                            <div class="resource-icon caps">
+                                <i class="fas fa-coins"></i>
+                            </div>
+                            <div class="resource-info">
+                                <label for="caps-input">Caps</label>
+                                <input type="number" id="caps-input" class="resource-input" min="0" max="999999999">
+                            </div>
+                        </div>
+
+                        <div class="resource-card">
+                            <div class="resource-icon food">
+                                <i class="fas fa-apple-alt"></i>
+                            </div>
+                            <div class="resource-info">
+                                <label for="food-input">Food</label>
+                                <input type="number" id="food-input" class="resource-input" min="0" max="999999">
+                            </div>
+                        </div>
+
+                        <div class="resource-card">
+                            <div class="resource-icon water">
+                                <i class="fas fa-tint"></i>
+                            </div>
+                            <div class="resource-info">
+                                <label for="water-input">Water</label>
+                                <input type="number" id="water-input" class="resource-input" min="0" max="999999">
+                            </div>
+                        </div>
+
+                        <div class="resource-card">
+                            <div class="resource-icon power">
+                                <i class="fas fa-bolt"></i>
+                            </div>
+                            <div class="resource-info">
+                                <label for="power-input">Power</label>
+                                <input type="number" id="power-input" class="resource-input" min="0" max="999999">
+                            </div>
+                        </div>
+
+                        <div class="resource-card">
+                            <div class="resource-icon stimpaks">
+                                <i class="fas fa-syringe"></i>
+                            </div>
+                            <div class="resource-info">
+                                <label for="stimpaks-input">Stimpaks</label>
+                                <input type="number" id="stimpaks-input" class="resource-input" min="0" max="999999">
+                            </div>
+                        </div>
+
+                        <div class="resource-card">
+                            <div class="resource-icon radaway">
+                                <i class="fas fa-radiation-alt"></i>
+                            </div>
+                            <div class="resource-info">
+                                <label for="radaway-input">RadAway</label>
+                                <input type="number" id="radaway-input" class="resource-input" min="0" max="999999">
+                            </div>
+                        </div>
+
+                        <div class="resource-card">
+                            <div class="resource-icon quantum">
+                                <i class="fas fa-atom"></i>
+                            </div>
+                            <div class="resource-info">
+                                <label for="quantum-input">Nuka Cola Quantum</label>
+                                <input type="number" id="quantum-input" class="resource-input" min="0" max="999">
+                            </div>
+                        </div>
+
+                        <div class="resource-card">
+                            <div class="resource-icon lunchbox">
+                                <i class="fas fa-gift"></i>
+                            </div>
+                            <div class="resource-info">
+                                <label for="lunchbox-input">Lunchboxes</label>
+                                <input type="number" id="lunchbox-input" class="resource-input" min="0" max="999">
+                            </div>
+                        </div>
+
+                        <div class="resource-card">
+                            <div class="resource-icon mrhandy">
+                                <i class="fas fa-robot"></i>
+                            </div>
+                            <div class="resource-info">
+                                <label for="mrhandy-input">Mr. Handy</label>
+                                <input type="number" id="mrhandy-input" class="resource-input" min="0" max="99">
+                            </div>
+                        </div>
+
+                        <div class="resource-card">
+                            <div class="resource-icon petcarrier">
+                                <i class="fas fa-paw"></i>
+                            </div>
+                            <div class="resource-info">
+                                <label for="petcarrier-input">Pet Carriers</label>
+                                <input type="number" id="petcarrier-input" class="resource-input" min="0" max="999">
+                            </div>
+                        </div>
+
+                        <div class="resource-card">
+                            <div class="resource-icon lunchbox">
+                                <i class="fas fa-gift"></i>
+                            </div>
+                            <div class="resource-info">
+                                <label for="lunchbox-input">Lunchboxes</label>
+                                <input type="number" id="lunchbox-input" class="resource-input" min="0" max="999">
+                            </div>
+                        </div>
+
+                        <div class="resource-card">
+                            <div class="resource-icon mrhandy">
+                                <i class="fas fa-robot"></i>
+                            </div>
+                            <div class="resource-info">
+                                <label for="mrhandy-input">Mr. Handy</label>
+                                <input type="number" id="mrhandy-input" class="resource-input" min="0" max="99">
+                            </div>
+                        </div>
+
+                        <div class="resource-card">
+                            <div class="resource-icon petcarrier">
+                                <i class="fas fa-paw"></i>
+                            </div>
+                            <div class="resource-info">
+                                <label for="petcarrier-input">Pet Carriers</label>
+                                <input type="number" id="petcarrier-input" class="resource-input" min="0" max="999">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="action-bar">
+                        <button class="primary-btn" id="apply-resources-btn">
+                            <i class="fas fa-check"></i>
+                            Apply Changes
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Vault Info Tab -->
+                <div class="tab-content" id="vault-tab">
+                    <div class="tab-header">
+                        <h2><i class="fas fa-building"></i> Vault Information</h2>
+                    </div>
+
+                    <div class="vault-info-grid">
+                        <div class="info-card">
+                            <label for="vault-name-input">Vault Name</label>
+                            <input type="text" id="vault-name-input" class="text-input">
+                        </div>
+
+                        <div class="info-card">
+                            <label for="vault-mode-input">Vault Mode</label>
+                            <select id="vault-mode-input" class="select-input">
+                                <option value="Normal">Normal</option>
+                                <option value="Survival">Survival</option>
+                            </select>
+                        </div>
+
+                        <div class="info-card">
+                            <label for="vault-theme-input">Vault Theme</label>
+                            <input type="number" id="vault-theme-input" class="number-input" min="0" max="10">
+                        </div>
+                    </div>
+
+                    <div class="action-bar">
+                        <button class="primary-btn" id="apply-vault-btn">
+                            <i class="fas fa-check"></i>
+                            Apply Changes
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Dwellers Tab -->
+                <div class="tab-content" id="dwellers-tab">
+                    <div class="tab-header">
+                        <h2><i class="fas fa-users"></i> Dwellers</h2>
+                        <div class="tab-actions">
+                            <button class="secondary-btn" id="max-all-dwellers-btn">
+                                <i class="fas fa-arrow-up"></i>
+                                Max All Dwellers
+                            </button>
+                            <button class="secondary-btn" id="refresh-dwellers-btn">
+                                <i class="fas fa-sync"></i>
+                                Refresh
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="dwellers-container">
+                        <div class="dwellers-list" id="dwellers-list">
+                            <div class="placeholder">
+                                <i class="fas fa-users"></i>
+                                <p>Load a save file to view dwellers</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Raw Data Tab -->
+                <div class="tab-content" id="raw-tab">
+                    <div class="tab-header">
+                        <h2><i class="fas fa-code"></i> Raw Data</h2>
+                        <div class="tab-actions">
+                            <button class="secondary-btn" id="format-json-btn">
+                                <i class="fas fa-indent"></i>
+                                Format
+                            </button>
+                            <button class="secondary-btn" id="copy-json-btn">
+                                <i class="fas fa-copy"></i>
+                                Copy
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="raw-data-container">
+                        <textarea id="raw-data-textarea" class="raw-data-textarea" readonly></textarea>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Status Bar -->
+        <footer class="status-bar">
+            <div class="status-left">
+                <span id="status-text">Ready</span>
+            </div>
+            <div class="status-right">
+                <span id="file-size">-</span>
+                <span class="separator">|</span>
+                <span id="last-modified">-</span>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Loading Overlay -->
+    <div class="loading-overlay" id="loading-overlay">
+        <div class="loading-spinner">
+            <i class="fas fa-radiation fa-spin"></i>
+            <p>Processing save file...</p>
+        </div>
+    </div>
+
+    <!-- Toast Notifications -->
+    <div class="toast-container" id="toast-container"></div>
+
+    <!-- Startup Animation -->
+    <div class="startup-overlay" id="startup-overlay">
+        <div class="startup-content">
+            <div class="vault-door">
+                <div class="vault-door-outer">
+                    <div class="vault-door-inner">
+                        <div class="vault-number">111</div>
+                        <div class="vault-spokes">
+                            <div class="spoke"></div>
+                            <div class="spoke"></div>
+                            <div class="spoke"></div>
+                            <div class="spoke"></div>
+                            <div class="spoke"></div>
+                            <div class="spoke"></div>
+                            <div class="spoke"></div>
+                            <div class="spoke"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="startup-text">
+                <h1 class="startup-title">FALLOUT SHELTER</h1>
+                <h2 class="startup-subtitle">SAVE EDITOR</h2>
+                <div class="version-info">
+                    <span class="version-badge">v1.0.0</span>
+                    <span class="vault-tec-badge">VAULT-TEC APPROVED</span>
+                </div>
+                <div class="loading-dots">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <p class="startup-status" id="startup-status">Initializing Vault-Tec Systems...</p>
+            </div>
+            
+            <div class="startup-progress">
+                <div class="progress-bar">
+                    <div class="progress-fill" id="startup-progress"></div>
+                </div>
+                <div class="progress-text">
+                    <span>VAULT-TEC APPROVED</span>
+                    <span id="progress-percent">0%</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="radiation-particles">
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+        </div>
+    </div>
+
+    <script src="renderer.js"></script>
+</body>
+</html>

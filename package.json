@@ -1,0 +1,57 @@
+{
+  "name": "fallout-shelter-save-editor",
+  "version": "1.0.0",
+  "description": "A modern save editor for Fallout Shelter with AES decryption support",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "dev": "electron . --dev",
+    "build": "electron-builder",
+    "build-win": "electron-builder --win",
+    "build-mac": "electron-builder --mac",
+    "build-linux": "electron-builder --linux",
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder --publish=never"
+  },
+  "keywords": [
+    "fallout-shelter",
+    "save-editor",
+    "game-modding",
+    "electron"
+  ],
+  "author": "Kiro AI Assistant",
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "^27.0.0",
+    "electron-builder": "^24.6.4"
+  },
+  "dependencies": {
+    "crypto-js": "^4.2.0"
+  },
+  "build": {
+    "appId": "com.kiro.fallout-shelter-editor",
+    "productName": "Fallout Shelter Save Editor",
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "main.js",
+      "renderer.js",
+      "index.html",
+      "styles.css",
+      "assets/**/*"
+    ],
+    "win": {
+      "target": "nsis",
+      "icon": "assets/icon.ico"
+    },
+    "mac": {
+      "target": "dmg",
+      "icon": "assets/icon.icns"
+    },
+    "linux": {
+      "target": "AppImage",
+      "icon": "assets/icon.png"
+    }
+  }
+}
