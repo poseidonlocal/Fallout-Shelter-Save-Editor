@@ -1,3 +1,7 @@
+<hr>
+<div align="center"><img width="298" height="298" alt="188743753" src="https://github.com/user-attachments/assets/4e920833-d794-4a2a-b599-d5e3d2336983" /></div>
+<hr>
+
 # Fallout Shelter Save Editor
 
 A modern, cross-platform save editor for Fallout Shelter built with Electron.js. Features AES decryption support and a beautiful, intuitive interface.
@@ -206,5 +210,6 @@ If you encounter issues:
 3. Include your operating system and save file details (without personal data)
 
 ---
+
 
 **Enjoy modifying your vault! 🏠⚡**
