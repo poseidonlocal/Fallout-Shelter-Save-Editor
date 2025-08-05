@@ -6,15 +6,13 @@ A modern, cross-platform save editor for Fallout Shelter built with Electron.js.
 
 ### Main Interface
 ![Main Interface](assets/main-interface.png)
-*The main editor interface with resource management*
+*Welcome screen with quick access to all major features*
 
-### Vault Management
-![Vault Management](assets/vault-management.png)
-*Vault configuration and dweller overview*
-
-### Resource Editor
-![Resource Editor](assets/resource-editor.png)
-*Edit caps, resources, and items with ease*
+The editor provides four main functions:
+- 💰 **Resource Management** - Edit caps, food, water, power, and consumables
+- 👥 **Dweller Editor** - Modify dweller stats and equipment
+- 🏠 **Vault Information** - View and edit vault details
+- 🛡️ **Safe Editing** - Automatic backups and validation
 
 ## Latest Release
 
@@ -22,9 +20,9 @@ A modern, cross-platform save editor for Fallout Shelter built with Electron.js.
 🎉 First stable release with all core features implemented!
 
 **Download:**
-- [Windows (64-bit)](https://github.com/poseidonlocal/Fallout-Shelter-Save-Editor/releases/download/v1.0.0/FalloutShelterEditor-Setup-Win-x64.exe)
-- [macOS (Universal)](https://github.com/poseidonlocal/Fallout-Shelter-Save-Editor/releases/download/v1.0.0/FalloutShelterEditor-Setup-Mac.dmg)
-- [Linux (AppImage)](https://github.com/poseidonlocal/Fallout-Shelter-Save-Editor/releases/download/v1.0.0/FalloutShelterEditor-Linux.AppImage)
+- [Windows (64-bit)](https://gitea.serversyndicate.com/Bored/Fallout-Shelter-Save-Editor/releases/download/v1.0.0/FalloutShelterEditor-Setup-Win-x64.exe)
+- [macOS (Universal)](https://gitea.serversyndicate.com/Bored/Fallout-Shelter-Save-Editor/releases/download/v1.0.0/FalloutShelterEditor-Setup-Mac.dmg)
+- [Linux (AppImage)](https://gitea.serversyndicate.com/Bored/Fallout-Shelter-Save-Editor/releases/download/v1.0.0/FalloutShelterEditor-Setup-Linux.AppImage)
 
 **What's New:**
 - ✨ Initial release with full save file editing support
@@ -33,7 +31,7 @@ A modern, cross-platform save editor for Fallout Shelter built with Electron.js.
 - 💾 Automatic backup system
 - 🔧 Resource and vault management features
 
-[View all releases](https://github.com/poseidonlocal/Fallout-Shelter-Save-Editor/releases)
+[View all releases](https://gitea.serversyndicate.com/Bored/Fallout-Shelter-Save-Editor/releases)
 
 ## Features
 
@@ -49,7 +47,7 @@ A modern, cross-platform save editor for Fallout Shelter built with Electron.js.
 ## Installation
 
 ### Option 1: Download Pre-built Binary
-1. Go to the [Releases](https://github.com/your-repo/releases) page
+1. Go to the [Releases](https://gitea.serversyndicate.com/Bored/Fallout-Shelter-Save-Editor/releases) page
 2. Download the appropriate version for your operating system
 3. Install and run the application
 
@@ -62,8 +60,8 @@ A modern, cross-platform save editor for Fallout Shelter built with Electron.js.
 #### Steps
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-repo/fallout-shelter-save-editor.git
-   cd fallout-shelter-save-editor
+   git clone https://gitea.serversyndicate.com/Bored/Fallout-Shelter-Save-Editor.git
+   cd Fallout-Shelter-Save-Editor
    ```
 
 2. Install dependencies:
@@ -203,7 +201,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## Support
 
 If you encounter issues:
-1. Check the [Issues](https://github.com/your-repo/issues) page
+1. Check the [Issues](https://gitea.serversyndicate.com/Bored/Fallout-Shelter-Save-Editor/issues) page
 2. Create a new issue with detailed information
 3. Include your operating system and save file details (without personal data)
 
