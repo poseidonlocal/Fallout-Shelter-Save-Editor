@@ -2,7 +2,38 @@
 
 A modern, cross-platform save editor for Fallout Shelter built with Electron.js. Features AES decryption support and a beautiful, intuitive interface.
 
-![Fallout Shelter Save Editor](assets/screenshot.png)
+## Screenshots
+
+### Main Interface
+![Main Interface](assets/main-interface.png)
+*The main editor interface with resource management*
+
+### Vault Management
+![Vault Management](assets/vault-management.png)
+*Vault configuration and dweller overview*
+
+### Resource Editor
+![Resource Editor](assets/resource-editor.png)
+*Edit caps, resources, and items with ease*
+
+## Latest Release
+
+### Version 1.0.0 (August 2025)
+🎉 First stable release with all core features implemented!
+
+**Download:**
+- [Windows (64-bit)](https://github.com/poseidonlocal/Fallout-Shelter-Save-Editor/releases/download/v1.0.0/FalloutShelterEditor-Setup-Win-x64.exe)
+- [macOS (Universal)](https://github.com/poseidonlocal/Fallout-Shelter-Save-Editor/releases/download/v1.0.0/FalloutShelterEditor-Setup-Mac.dmg)
+- [Linux (AppImage)](https://github.com/poseidonlocal/Fallout-Shelter-Save-Editor/releases/download/v1.0.0/FalloutShelterEditor-Linux.AppImage)
+
+**What's New:**
+- ✨ Initial release with full save file editing support
+- 🔒 AES encryption/decryption implementation
+- 🎨 Modern, user-friendly interface
+- 💾 Automatic backup system
+- 🔧 Resource and vault management features
+
+[View all releases](https://github.com/poseidonlocal/Fallout-Shelter-Save-Editor/releases)
 
 ## Features
 
